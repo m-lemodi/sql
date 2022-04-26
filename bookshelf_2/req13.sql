@@ -1,0 +1,1 @@
+SELECT title, other.author AS author FROM (SELECT MIN(release) AS date, author FROM books GROUP BY author) AS other JOIN books ON other.author = books.author WHERE other.date = release ORDER BY title, author;

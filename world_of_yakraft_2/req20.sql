@@ -1,0 +1,1 @@
+SELECT creture.name FROM creature_template AS creture JOIN loots AS loot ON loot.creature_gid = creture.id JOIN item ON item.id = loot.item_id JOIN inventory AS invent ON invent.item_id = item.id JOIN character AS char ON char.id = invent.character_id WHERE char.name = 'Tilon' ORDER BY creture.name;
